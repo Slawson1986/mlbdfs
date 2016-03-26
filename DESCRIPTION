@@ -8,6 +8,6 @@ Description: This package is a collection of tools for entering daily fantasy
     sports (DFS) contests. They're optimized for DraftKings mostly because
     DraftKings allows late swaps and supports much more interaction via CSV files.
     With a little more work they could be made to function on other DFS sites.
-License: AGPL-3
+License: MIT
 LazyData: TRUE
 RoxygenNote: 5.0.1
