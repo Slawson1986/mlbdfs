@@ -1,0 +1,13 @@
+Package: mlbdfs
+Type: Package
+Title: Major League Baseball Daily Fantasy Sports Tools
+Version: 0.0.0.9999
+Author: M. Edward (Ed) Borasky <znmeb@znmeb.net>
+Maintainer: M. Edward (Ed) Borasky <znmeb@znmeb.net>
+Description: This package is a collection of tools for entering daily fantasy
+    sports (DFS) contests. They're optimized for DraftKings mostly because
+    DraftKings allows late swaps and supports much more interaction via CSV files.
+    With a little more work they could be made to function on other DFS sites.
+License: AGPL-3
+LazyData: TRUE
+RoxygenNote: 5.0.1
