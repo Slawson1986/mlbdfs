@@ -11,3 +11,5 @@ Description: This package is a collection of tools for entering daily fantasy
 License: MIT + file LICENSE
 LazyData: TRUE
 RoxygenNote: 5.0.1
+Imports: pitchRx,
+    dplyr
