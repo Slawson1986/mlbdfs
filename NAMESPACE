@@ -3,6 +3,6 @@
 export(gameday_database_init)
 export(gameday_database_update)
 export(get_stattleship_game_logs)
-export(install_stattleship)
+export(install_github_packages)
 export(read_template)
 export(set_stattleship_token)

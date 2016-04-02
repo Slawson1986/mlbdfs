@@ -25,14 +25,23 @@ gameday_database_update <- function(sqlite_db_file) {
   pitchRx::update_db(connect = connection$con)
 }
 
-#' @title Install Stattleship client
-#' @name install_stattleship
-#' @description installs the Stattleship API client from GitHub
-#' @export install_stattleship
+#' @title Install GitHubPackages
+#' @name install_github_packages
+#' @description installs packages from GitHub for baseball. Current packages are
+#' \itemize{
+#' \item stattleship/stattleship-r
+#' \item rmscriven/retrosheet
+#' \item cboettig/Sxslt
+#' \item beanumber/openWAR}
+#' @export install_github_packages
 #' @return NULL
 
-install_stattleship <- function() {
-  devtools::install_github("stattleship/stattleship-r")
+install_github_packages <- function() {
+  devtools::install_github(c(
+    "stattleship/stattleship-r",
+    "rmscriven/retrosheet",
+    "cboettig/Sxslt",
+    "beanumber/openWAR"), build_vignettes = TRUE)
   return(NULL)
 }
 
