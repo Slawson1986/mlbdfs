@@ -14,3 +14,6 @@ RoxygenNote: 5.0.1
 Imports: pitchRx,
     dplyr,
     devtools
+Suggests: knitr,
+    rmarkdown
+VignetteBuilder: knitr

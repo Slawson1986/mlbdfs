@@ -1,0 +1,24 @@
+---
+title: "Workflow"
+author: "M. Edward (Ed) Borasky <znmeb@znmeb.net>"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Workflow}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+Basic workflow for MLB:
+
+1. As soon as they're posted on DraftKings, download the lineup templates. The "Download" button in the browser gives you a constant file name of "DKSalaries.csv", so you'll need to download them one at a time and run the function "rename_dksalaries_csv" to rename it based on its contents.
+2. Upload the templates to Google Drive. This has two benefits:
+
+    a. Archiving / backup
+    b. We can read and write Google Sheets from R!
+    
+    If you have GNOME 3.18 or later, Google Drive sync is built-in, as it is on Windows and MacOS X.
+3. Run the function "openWAR_update" to update the openWAR database. This is a temporary hack till we get the pitchRx updating working; openWAR is useful for manual analysis but the plan is to use the finest granuarity data available for pitches and batters.
+4. Do your analysis and enter contests. Right now, there's no code here for that other than looking at openWAR results. When you enter a contest, click the "Full Contest Details" link and do a "Save Page" in the browser. Then run the function "capture_contest_details" to extract the data about the contest into a database.
+5. When the contest is complete, download the standings CSV file. This file will have a name of the form "contest-standings-<contest id>.zip". Run the function "capture_contest_standings" to enter it in the database.
+6. Profit!
